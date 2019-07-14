@@ -1,6 +1,8 @@
 package edu.akki.practice;
 
 
+import java.util.StringJoiner;
+
 /**
  * Utility class to find various operations for different purposes
  */
@@ -135,6 +137,23 @@ public class Util1 {
     public static int countOccurence(String str, String subStr) {
         //    return (str.length() -str.replace(subStr,"").length())/subStr.length();
         return (str.split(subStr, -1).length - 1);
+    }
+
+
+    public static void partitionArray() {
+     /*   String inp = "The length of last words at my desk1";
+        String[] x= inp.split(" ");
+        String lastStr=x[x.length-1];
+        System.out.println(lastStr.length());*/
+
+        StringJoiner sj=new StringJoiner(" ","{","}");
+        sj.add("This is my sentence formation.").add("some sample cases");
+        System.out.println(sj.toString());
+
+    }
+
+    public static void main(String[] args) {
+        partitionArray();
     }
 
 }
